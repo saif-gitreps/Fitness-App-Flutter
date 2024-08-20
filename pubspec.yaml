@@ -64,8 +64,14 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
       - assets/icons/icons8-search-50.png
-      -
-
+      - assets/icons/jam.png
+      - assets/icons/orange-juice.png
+      - assets/icons/pancakes.png
+      - assets/icons/strawberry-cake.png
+      - assets/icons/salmon.png
+      - assets/icons/chicken-leg.png
+      - assets/icons/fried-rice.png
+      - assets/icons/churrasco.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

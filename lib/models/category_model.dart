@@ -15,16 +15,16 @@ class CategoryModels {
     List<CategoryModels> categories = [];
 
     categories.add(
-        CategoryModels(name:"Cake", iconPath:"/", boxColor: Colors.green)
+        CategoryModels(name:"Cake", iconPath:"/icons/strawberry-cake.png", boxColor: Colors.green)
     );
     categories.add(
-        CategoryModels(name:"Pancake", iconPath:"/", boxColor: Colors.blue)
+        CategoryModels(name:"Pancake", iconPath:"/icons/pancakes.png", boxColor: Colors.blue)
     );
     categories.add(
-        CategoryModels(name:"Juice", iconPath:"/", boxColor: Colors.red)
+        CategoryModels(name:"Juice", iconPath:"/icons/orange-juice.png", boxColor: Colors.red)
     );
     categories.add(
-        CategoryModels(name:"Jelly", iconPath:"/", boxColor: Colors.purple)
+        CategoryModels(name:"Jam", iconPath:"/icons/jam.png", boxColor: Colors.purple)
     );
 
 

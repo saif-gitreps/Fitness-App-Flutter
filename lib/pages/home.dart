@@ -30,77 +30,81 @@ class HomePage extends StatelessWidget {
           const SizedBox(height: 40),
           _dietSection(),
           const SizedBox(height: 40),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Padding(
-                padding: EdgeInsets.only(left: 20),
-                child: Text(
-                  'Popular Meals',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 15),
-              ListView.separated(
-                  shrinkWrap: true,
-                  padding: EdgeInsets.only(
-                    left:20,
-                    right:20,
-                  ),
-                  itemBuilder: (context, index) {
-                    return Container(
-                      height: 100,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                             Image.asset(popularDiets[index].iconPath)
-                        ,
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(popularDiets[index].name,
-                                  style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w600)
-                              ),
-                              Text(diets[index].level + ' | ' + diets[index].duration + ' | '+ diets[index].calorie,
-                                  style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w600)
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(16),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey,
-                            offset: Offset(0, 1),
-                            blurRadius: 80,
-                            spreadRadius: 0,
-                          )
-                        ]
-                      ),
-                    );
-                  },
-                  separatorBuilder: (context, index) => SizedBox(
-                    height: 20,
-                  ),
-                  itemCount: popularDiets.length
-              )
-            ],
-          ),
+          _popularSection(),
           const SizedBox(height: 40),
         ],
       ),
     );
+  }
+
+  Column _popularSection() {
+    return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Padding(
+              padding: EdgeInsets.only(left: 20),
+              child: Text(
+                'Popular Meals',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+            const SizedBox(height: 15),
+            ListView.separated(
+                shrinkWrap: true,
+                padding: EdgeInsets.only(
+                  left:20,
+                  right:20,
+                ),
+                itemBuilder: (context, index) {
+                  return Container(
+                    height: 100,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                           Image.asset(popularDiets[index].iconPath)
+                      ,
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(popularDiets[index].name,
+                                style: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w600)
+                            ),
+                            Text(diets[index].level + ' | ' + diets[index].duration + ' | '+ diets[index].calorie,
+                                style: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w600)
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey,
+                          offset: Offset(0, 1),
+                          blurRadius: 80,
+                          spreadRadius: 0,
+                        )
+                      ]
+                    ),
+                  );
+                },
+                separatorBuilder: (context, index) => SizedBox(
+                  height: 20,
+                ),
+                itemCount: popularDiets.length
+            )
+          ],
+        );
   }
 
   Column _dietSection() {
